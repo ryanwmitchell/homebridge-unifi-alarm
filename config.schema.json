@@ -1,0 +1,48 @@
+{
+  "pluginAlias": "UnifiAlarm",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "required": ["platform", "controller", "username", "password"],
+    "properties": {
+      "platform": {
+        "type": "string",
+        "const": "UnifiAlarm"
+      },
+      "name": {
+        "type": "string",
+        "title": "Accessory Name",
+        "default": "Security System"
+      },
+      "controller": {
+        "type": "string",
+        "title": "Controller Address",
+        "description": "IP address or hostname of your UniFi Protect controller (e.g. 192.168.1.1)."
+      },
+      "username": {
+        "type": "string",
+        "title": "Username",
+        "description": "Local UniFi OS account. Creating a dedicated read/write account is recommended."
+      },
+      "password": {
+        "type": "string",
+        "title": "Password",
+        "format": "password"
+      }
+    }
+  },
+  "layout": [
+    {
+      "type": "fieldset",
+      "title": "UniFi Protect Controller",
+      "items": ["controller", "username", "password"]
+    },
+    {
+      "type": "fieldset",
+      "title": "Accessory",
+      "expandable": true,
+      "items": ["name"]
+    }
+  ]
+}
