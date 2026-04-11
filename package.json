@@ -1,6 +1,6 @@
 {
   "name": "homebridge-unifi-alarm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Arm/disarm UniFi Protect alarm profiles via HomeKit",
   "license": "MIT",
   "homebridge-plugin": true,
